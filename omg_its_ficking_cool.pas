@@ -1,8 +1,8 @@
 uses crt, graph;
-const cell_size = 2; cell_count = 500; life_cell_color = 2; dead_cell_color = 8; x0 = 450; y0 = 10;
+const cell_size = 1; cell_count = 1000; life_cell_color = 2; dead_cell_color = 8; x0 = 450; y0 = 10;
 var g, h, i, j, r: integer; p: boolean; a, b: array[1..cell_count, 1..cell_count] of byte;
 
-procedure paint_cell(x, y, c: integer);
+procedure paint_cell(x, y: integer; c: byte);
 var i: integer;
 begin
 setcolor(c);
