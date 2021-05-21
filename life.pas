@@ -38,7 +38,7 @@ p := false;
 for i := 1 to cell_count do for j := 1 to cell_count do begin
 r := neighbors_sum(j, i);
 if (r = 3) and (a[j, i] = 0) then begin b[j, i] := 1; paint_cell(j, i, life_cell_color); p := true; end
-else if ((r < 2) or (r > 4)) and (a[j, i] = 1) then begin b[j, i] := 0; paint_cell(j, i, dead_cell_color); p := true; end;
+else if ((r < 2) or (r > 3)) and (a[j, i] = 1) then begin b[j, i] := 0; paint_cell(j, i, dead_cell_color); p := true; end;
 end;
 for i := 1 to cell_count do for j := 1 to cell_count do a[j, i] := b[j, i];
 delay(50);
